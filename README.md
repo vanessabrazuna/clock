@@ -1,2 +1,2 @@
 # clock
-Desafio prático de Javascript referente ao curso B7Web
+Desafio prático de Javascript referente ao curso B7Web, reproducão de um relógio.
