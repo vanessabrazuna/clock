@@ -10,6 +10,13 @@ function updateClock() {
     let secund = now.getSeconds();
 
     digitalElement.innerHTML = `${fixZero(hour)}:${fixZero(minute)}:${fixZero(secund)}`;
+    
+    /* relógio digital com operadores ternários
+      digitalElement.innerHTML = `
+        ${hour < 10 ? '0' : ''}${hour}:${minute < 10 ? '0' : ''}$
+        {minute}:${second < 10 ? '0' : ''}${second}
+      `
+    */
 
     let sDeg = ((360/60) * secund) - 90;
     let mDeg = ((360/60) * minute) - 90;
@@ -21,7 +28,7 @@ function updateClock() {
 }
 
 function fixZero(time) {
-    // if e else simplificado 
+    // operador ternário
     return time < 10 ? `0${time}` : time;
 
    // if(time < 10) {
